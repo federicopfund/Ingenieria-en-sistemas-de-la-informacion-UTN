@@ -1,23 +1,22 @@
-Proceso SubCadenas
-	// Definir tipo de datos 
-	Definir Caden,letra Como Caracter;
-	Definir i,ContadorA,Contadorb,largoCadena,j Como Entero;
-	// Pedeir una letra al usuuaruna
-	Escribir 'Digite una cadena de Caracteres';
-	// Asignar lo que ingresa el usuario
-	Leer Caden;
-	// Asignar un comtador en 0
-	ContadorA <-0;
-	// Asignar a una variable el largo de un la longitud de teto que
-	largoCadena <- Longitud(Caden);
-	Para i<-0 Hasta ((largoCadena/2)-1) Hacer
-		letra <- Subcadena(Caden,i,i);
-		Para j<-0 Hasta Longitud(Caden)/2 Hacer
-			Si Subcadena(Caden,j,j)==letra Entonces
-				ContadorA<- ContadorA + 1;
-				Escribir ContadorA;
-			FinSi
-		FinPara
-		
-	FinPara
+Proceso ej10_10
+    Definir frase,subfrase Como Caracter;
+    Definir i,n_subfrase Como Entero;
+    //pido la frase y la subfrase, y las paso a minusculas
+    Escribir "Ingrese una frase";
+    Leer frase;
+    frase <- Minusculas(frase);
+    Escribir "Ingrese una sub-frase, que quiera contabilizar cuantas veces se repite";
+    Leer subfrase;
+    subfrase <- Minusculas(subfrase);
+    n_subfrase <- 0;
+    // Deberia completarlo eliminando los espacios en blanco
+    
+    // Variando la posicion evaluo cuantas veces se repite la sub frase
+    Para i <- 0 hasta Longitud(frase)-1 Hacer
+        Si Subcadena(frase,i,Longitud(subfrase)+i-1) = subfrase Entonces
+            n_subfrase <- n_subfrase + 1;
+        FinSi
+    FinPara
+    Escribir "La sub-frase se repite ",n_subfrase," veces.";
+    
 FinProceso

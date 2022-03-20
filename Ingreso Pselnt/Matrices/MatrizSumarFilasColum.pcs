@@ -1,0 +1,62 @@
+// Ejercicio 3: Hacer un algoritmo que llene una matriz de 4*4. Calcular la 
+// suma de cada fila y almacenarla en un arreglo, la suma de cada columna y
+// almacenarla en otro arreglo. (Diagrama N-S)
+Proceso principal
+	// Definimos tipos de variables
+	Definir num,i,j Como Entero;
+	// Declaramos una matriz con una dimencion de 4,4
+	Dimension num[4,4];
+	// Definir dnuevas variables el tipo de datos
+	Definir suma_filas,posFila,suma_columnas,posCol Como Entero;
+	Definir filas,columnas Como Entero;
+	Dimension filas[4],columnas[4];
+	// Pedimos los elementos de la matriz
+	Para i<-0 Hasta 3 Hacer
+		Para j<-0 Hasta 3 Hacer
+			// Le Pedimos al usuario que ingrese datos para llenar la Matriz.
+			Escribir 'Digite un numero[',i,'][',j,']: ' Sin Saltar;
+			Leer num[i,j];
+		FinPara
+	FinPara
+	// Mostramos la matriz
+	Escribir '';
+	Para i<-0 Hasta 3 Hacer
+		Para j<-0 Hasta 3 Hacer
+			Escribir num[i,j],' ' Sin Saltar;
+		FinPara
+		Escribir '';
+	FinPara
+	// Recorremos la matriz sumando filas
+	posFila <- 0;
+	Para i<-0 Hasta 3 Hacer
+		suma_filas <- 0;
+		Para j<-0 Hasta 3 Hacer
+			suma_filas <- suma_filas+num[i,j];
+		FinPara
+		filas[posFila] <- suma_filas;
+		posFila <- posFila+1;
+	FinPara
+	// Recorremos la matriz y sumamos las columnas
+	posCol <- 0;
+	Para j<-0 Hasta 3 Hacer
+		suma_columnas <- 0;
+		Para i<-0 Hasta 3 Hacer
+			suma_columnas <- suma_columnas+num[i,j];
+		FinPara
+		columnas[posCol] <- suma_columnas;
+		posCol <- posCol+1;
+	FinPara
+	// Mostramos la suma de las filas
+	Escribir '';
+	Escribir 'La suma de las filas es: ' Sin Saltar;
+	Para i<-0 Hasta 3 Hacer
+		Escribir filas[i],' ' Sin Saltar;
+	FinPara
+	// Mostramos la suma de las columnas
+	Escribir '';
+	Escribir 'La suma de las columnas es: ' Sin Saltar;
+	Para i<-0 Hasta 3 Hacer
+		Escribir columnas[i],' ' Sin Saltar;
+	FinPara
+	Escribir '';
+FinProceso

@@ -9,5 +9,26 @@ Proceso sin_titulo
 			Leer matriz1[i,j];
 		FinPara
 	FinPara
-	
+	Escribir "Escribir la matriz decendente";
+	Para i<-0 Hasta 2 Hacer
+		Para j<-0 Hasta 2 Hacer
+			Escribir '[',i,':',j,']';
+			Leer matriz2[i,j];
+		FinPara
+	FinPara
+	Escribir '';
+	// mostramos la matriz
+	Para i<-0 Hasta 2 Hacer
+		Para j<-0 Hasta 2 Hacer
+			Escribir matriz2[i,j],' ';
+		FinPara
+		Escribir '';
+	FinPara
+	Escribir '';
+	// mostrar las dos matrices
+	Para i<-0 Hasta 2 Hacer
+		Para j<-0 Hasta 2 Hacer
+			Escribir matriz2[i,j] + matriz1[i,j];
+		FinPara
+	FinPara
 FinProceso

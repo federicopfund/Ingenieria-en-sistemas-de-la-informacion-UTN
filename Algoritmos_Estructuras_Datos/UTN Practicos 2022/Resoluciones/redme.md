@@ -45,6 +45,26 @@
    
    # Diferencias 
    + La diferencia entre un algoritmo y un programa es que si bien ambos hacen referencia una serie de instrucciones, los algoritmos pueden estar escritos en código o en lenguaje natural, mientras que los programas sólo pueden estar escritos en lenguaje de programación.
-![AlgoritmoVsPrograma](../imag/algoritmoVsPrograma.png)
-
     
+    ![AlgoritmoVsPrograma](../imag/algoritmoVsPrograma.png)
+
+ # Tipos de datos en python Vs Rango:
+* Tipos de datos basicos:
+  + 1. Booleano:(True y False) solo 2.
+ * De tipo Numerico:
+  + 2. Entero:(int) Mientra encuentre memoria disponible lo guarda.
+  + 3. De Punto Flotante:(Float)
+  + 4. Complejos:(1+2j)
+ * Otros de Secuencia:
+  + 5. String:(str)
+  + 6. Tuple: ()
+  + 7. Range: Rango
+  + 8. List: [] listas
+  + 9. Dict: {} Diccionario
+  + 10. Set(): Conjuntos
+  + 11. None: tipo de dato de instancia
+![Datos de python](../imag/Datos.py)
+
+  # Tipos de datos de C+
+ 
+ * ![Tipos de datos de c](../imag/datosdeC.png)

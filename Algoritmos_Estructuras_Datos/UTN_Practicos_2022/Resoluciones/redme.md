@@ -68,3 +68,5 @@
   # Tipos de datos de C+
  
  * ![Tipos de datos de c](../imag/datosdeC.png)
+
+ 

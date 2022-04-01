@@ -1,4 +1,4 @@
-import random
+
 
 def merge_sort(lista):
     """Ordena lista mediante el método merge sort.

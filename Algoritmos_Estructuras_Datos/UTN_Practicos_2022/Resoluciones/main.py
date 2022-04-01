@@ -26,6 +26,7 @@
 ##  h) Cantidad de intentos permitidos para ingresar la contraseña.(tipo Int)-->unidad dimencional entera.
 #%%
 from ast import Num
+from posixpath import split
 import sys
 from sodiaco import Sodiaco
 from pip import main
@@ -40,8 +41,13 @@ def main():
     elnumero_es_par(parametro)
     nombre = input("Ingrese su fecha de Nacimiento:Ejem:(25/10/1996): ")
     Sodiaco(nombre)
-    lista = input("ingresa la lista con formato[1,2,3]: ")
-    merge_sort(lista,)
+    print("Lista a ordenar: [1,5,3,5] ")
+    print(f"devolvera una lista ordenada:{merge_sort([1,5,3,5])[0]}, Cantida de comparaciones que hizo para lograrlo:{merge_sort([1,5,3,5])[1]}")
+    lista=rellena()
+    print("ordenacion por merge_sort: ")
+    print(merge_sort(lista)[0])
+    
+    ##print(f"devolvera una lista ordenada:{merge_sort(lista)[0]}, Cantida de comparaciones que hizo para lograrlo:{merge_sort(lista)[1]}")
 main()
 
 

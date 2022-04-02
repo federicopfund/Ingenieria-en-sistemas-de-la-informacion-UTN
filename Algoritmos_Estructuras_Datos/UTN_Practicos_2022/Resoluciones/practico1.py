@@ -22,10 +22,10 @@
 
 ##ingrso=int(input(f"Ingresa un Valor:"))
 ##print(f"Has introducido el Numero: {ingrso}")
-
+#%%
 ##Ejercicio N°6
 
-"""from cmath import sqrt
+from cmath import sqrt
 
 
 number1= int(input((f"Ingresa un valor Numerico:")))
@@ -44,7 +44,7 @@ try:
        
 except ValueError:
     print(f"Usted debe ingresar un valor Entero.")
-    
+#%%    
 ##Ejercicio N°7
 def Function(a,b):
     print(f"Ingresa el valor de las Constante a Operar")
@@ -79,7 +79,8 @@ def FunctionMultiVariables(x,y):
      return (x-y)/(x+y)
 print("f):")
 print(f"Valor de la operacio f): {FunctionMultiVariables(3,3)}")
-"""
+#%%
+
 ## Ejercicio N°8
 try:
     Numer_Real= float(input("Ingrese el primer Valor Real: "))
@@ -90,7 +91,29 @@ try:
         print(f"Deve ingresar un Numero distinto de 0")
 except:
     print(f"Deves Ingresar un Valor Numerico.")
+#%%
+##Ejercicio N°9
+try:
+    numero1= int(input("Ingresa un Numero: "))
+    numero2= int(input("Ingresar un Numero:"))
 
+    if numero1 == numero2 :
+        print("Numero iguales")
+    else:
+        print("Numeros Desiguales")
+except ValueError as err:
+    print("ingrese un caracter correcto")
+#%%
+##Ejercisio N°10
+try:
+    numero1= int(input("Ingresa un Numero: "))
+    numero2= int(input("Ingresar un Numero:"))
 
-
-
+    if numero1 > numero2 :
+        print(f"Numero iguales")
+    else:
+        print("Numeros Desiguales")
+except ValueError as err:
+    print("ingrese un caracter correcto")
+    
+##Ejercico N°11

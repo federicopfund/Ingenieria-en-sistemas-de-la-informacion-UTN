@@ -1,5 +1,8 @@
 
-
+## Mentor: Lic. Carina Povarchik
+## Ing. Fabian Talio
+## Ing. Carolina Zapata
+## Prof. Lucas Candia
 
 
 from variados.variados import serie,cuentaregresiva, sumapositivosnegativos,nuemerosenteros,SupremeMachineComputing,ingresa,inverso, pucha, piramide

@@ -424,3 +424,24 @@ def personal_venta(monto,tipo_targeta,cuotas):
         tipo_targeta = input("ingrese la forma de pago: ")
         cuotas = int(input("ingrese las cuotas: "))
         personal_venta(monto,tipo_targeta,cuotas)
+
+def main():
+    cuadrado(4)
+    escribir_tabla_multiplicar(4)
+    escribir_tabla_multiplicar(4)
+    cuadrante(4,2)
+    potencia(2,3)
+    cadena_letra("adena","a")
+    cadena_letra_10("caracter", [1,2,2])
+    funcion_logica(3)
+    trianguloinverso("er", 3)
+    es_primo(3)
+    promedio(3,2,2,3,2,1)
+    caracterposicion("cadena","a")
+    ceros_unos(2)
+    paga(1200,"devito")
+    paga_tarjeta(1200,"master")
+    personal_venta(1233,"master",3)
+
+if "__main__" == __name__:
+    main()

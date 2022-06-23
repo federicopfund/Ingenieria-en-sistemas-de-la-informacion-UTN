@@ -100,5 +100,5 @@ def f():
         h()
         # print(z) aca si no entiende y no sabe que es z, ya que z es local re contra local.
     g()
-f()
+    print(y) # si entiende que es y, y es local pero definida dentro del procedimiento.
 

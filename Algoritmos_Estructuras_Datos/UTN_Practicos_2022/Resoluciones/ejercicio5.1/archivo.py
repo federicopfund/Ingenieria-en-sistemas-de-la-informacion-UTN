@@ -1,6 +1,9 @@
 ## Crear un archivo de texto .txt de notas de Windows, y guardar una palabra por lınea.
 ## Crear un programa que muestre en pantalla, una por una, las palabras que hay guardadas en ese archivo.
-def archivo():
+from distutils import extension
+
+
+def archivo():# podriamos mandar un argumento pdre para que gobierne todas las funciones internas? Yes, you can!
     
         # crear un archivo de texto
     def crear_archivo(nombre):
@@ -18,7 +21,7 @@ def archivo():
            with open(nombre, "w+") as archivo:
                for i in range(cantidad):
                    archivo.write(f'LINEA:{i}: {texto}\n')
-        except:
+        except OSError :
             print("No se pudo escribir en el archivo")
             return None
             
@@ -29,7 +32,7 @@ def archivo():
         # mostrar lineas
         for linea in lineas:
             print(linea)
-    def main():
+    def main_hijo():
         ingrese_nombre = input(f"Ingrese el nombre del archivo: ") 
         extencion = input(f"Ingrese la extencion del archivo: ")
         nombre = ingrese_nombre + "." + extencion
@@ -37,14 +40,37 @@ def archivo():
         texto = input(f"Ingrese el texto que desea guardar en el archivo: ")
         escribir_archivo(nombre, texto)       
         mostrar_leer_archivo(nombre)  
-    main()        
-archivo() 
-    
-    
-
-
+    main_hijo()        
 
     
+# Crear un programa que genere un archivo de texto llamado numeros.txt con 10 numeros
+# enteros guardados en el mismo, uno por lınea.
+
+def archivo_numeros():
+    try:
+        def crea_archivo_algoritmen(nombre,cantidad):
+            with open(nombre, 'a') as f:
+                for i in range(cantidad):
+                    f.write(f'{i}\n')
+            return f
+    except OSError:
+        print("No se pudo crear el archivo")
+        
+    def leer_algoritmen(nombre):
+        with open(nombre, 'r') as f:
+            lineas = f.readlines()
+        for linea in lineas:
+            print(f'linea: {linea}')
+    
+    def main_hijo(nombre,cantidad,extension):
+        
+        nombre = nombre + "." + extension
+        
+        crea_archivo_algoritmen(nombre,cantidad)
+        leer_algoritmen(nombre)
+    main_hijo("numeros",10,"txt")
+    
+archivo_numeros()
 
 
 

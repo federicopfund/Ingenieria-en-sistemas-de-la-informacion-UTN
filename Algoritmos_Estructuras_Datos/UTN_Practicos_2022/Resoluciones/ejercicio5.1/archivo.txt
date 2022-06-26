@@ -1,0 +1,5 @@
+LINEA:0: texto
+LINEA:1: texto
+LINEA:2: texto
+LINEA:3: texto
+LINEA:4: texto

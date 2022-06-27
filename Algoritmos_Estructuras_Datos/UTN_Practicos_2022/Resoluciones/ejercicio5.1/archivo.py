@@ -78,6 +78,7 @@ def archivo_numeros():
     ## llenamos  archivo con numeros random   
     def llenar_archivo(nombre,cantidad):
          with open(nombre, "w+") as f:
+            
             for i in range(cantidad):
                 numero = random.randint(1,10)
                 f.write(f'{numero}\n')
@@ -97,11 +98,41 @@ def archivo_numeros():
         nombre = nombre + "." + extension
         crear_archivo_como(nombre,extension)
         cantidad = int(input("Ingrese la cantidad de numeros que desea guardar: "))
+       
         llenar_archivo(nombre,cantidad)
         leer_archivo_compara(nombre)
     main_hijo()
 
-
+def archivo_numeros_con_argumentos(nombre,cantidad,inicio,fin):
+    import random
+    def crear_archivo_como(nombre):
+       
+        with open(nombre, "a") as numero:
+            return numero
+    ## llenamos  archivo con numeros random   
+    def llenar_archivo(nombre,cantidad,inicio,fin):
+         with open(nombre, "w+") as f:
+            
+            for i in range(cantidad):
+                numero = random.randint(inicio,fin)
+                f.write(f'{numero}\n')
+    ## leemos archivo
+    def leer_archivo_compara(nombre):
+        contador=0
+        with open(nombre, 'r') as f:
+            lineas = f.readlines()
+            for linea in lineas:
+                if linea.strip() == '5':
+                    contador += 1
+        print(f'Cantidad de numeros iguales a 5: {contador}')
+        
+    def main_hijo(nombre,cantidad,inicio,fin):
+        crear_archivo_como(nombre)
+        llenar_archivo(nombre,cantidad,inicio,fin)
+        
+    main_hijo(nombre,cantidad,inicio,fin)
+    
+    
 def archivo_promedio(nombre):
     cuenta=0
     
@@ -116,7 +147,7 @@ def archivo_promedio(nombre):
     
 
 
-def main():
+def main_hijos_archivos():
     print("""Crear un archivo de texto .txt de notas de Windows, y guardar una palabra por lınea.
             Crear un programa que muestre en pantalla,una por una, 
             las palabras que hay guardadas en ese archivo.""")
@@ -132,5 +163,5 @@ def main():
     archivo_promedio('numeros.txt')
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main_hijos_archivos__":
+    main_hijos_archivos()

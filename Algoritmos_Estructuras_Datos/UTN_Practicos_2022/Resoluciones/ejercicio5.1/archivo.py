@@ -91,7 +91,36 @@ def archivo_numeros():
                 if linea.strip() == '5':
                     contador += 1
         print(f'Cantidad de numeros iguales a 5: {contador}')
-        
+      
+      
+## Crear un programa que genere 20 (veinte) números aleatorios ente 1 y 10 y
+# los guarde uno por línea en un archivo llamado numeros.txt. 
+# Posteriormente debe leer el archivo creado para mostrar el contenido por pantalla y determine 
+# cuántos números iguales a 7 y a 3 hay en el archivo.
+def contador_aleatorio():
+    import random
+    def crear_archivo_como(nombre,extension):
+        nombre= nombre + "." + extension
+        with open(nombre, "a") as numero:
+            return numero
+    ## llenamos  archivo con numeros random   
+    def llenar_archivo(nombre,cantidad):
+         with open(nombre, "w+") as f:
+            
+            for i in range(cantidad):
+                numero = random.randint(1,10)
+                f.write(f'{numero}\n')
+    ## leemos archivo
+    def leer_archivo_compara(nombre):
+        contador=0
+        with open(nombre, 'r') as f:
+            lineas = f.readlines()
+            for linea in lineas:
+                if linea.strip() == '7':
+                    contador += 1
+                if linea.strip() == '3':
+                    contador += 1
+        print(f'Cantidad de numeros iguales a 7: {contador}')  
     def main_hijo():
         nombre = input("Ingrese el nombre del archivo: ")
         extension = input("Ingrese la extencion del archivo: ")    

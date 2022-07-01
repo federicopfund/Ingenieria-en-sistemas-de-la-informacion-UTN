@@ -69,13 +69,7 @@ def buscarvalor(vector,valor):
             return 1
     return -1   
           
-def main():
-    import numpy as np
-    vector = np.array([1,2,3,4,5,6,7,8,9,10])
-    valor = 4
-    print(buscarvalor(vector,valor))
-    valor = 0
-    print(buscarvalor(vector,valor))
+
        
      
           

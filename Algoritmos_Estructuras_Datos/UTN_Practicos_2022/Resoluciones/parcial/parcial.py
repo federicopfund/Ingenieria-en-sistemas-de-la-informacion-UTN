@@ -57,12 +57,39 @@ def contador_aleatorio():
         llenar_archivo(nombre,cantidad)
         leer_archivo_compara(nombre)
     main_hijo()  
-     
+
+def buscarvalor(vector,valor):
+    """ Diseñar una función llamada BuscarValor, 
+         cuyo propósito sea buscar un determinado valor dentro de un conjunto de valores. 
+         Dicha función debe recibir como parámetros un vector  y una variable. 
+         La función debe retornar 1 si el valor de la variable existe dentro del vector y en caso contrario -1.
+    """
+    for i in vector:
+        if i == valor:
+            return 1
+    return -1   
+          
+def main():
+    import numpy as np
+    vector = np.array([1,2,3,4,5,6,7,8,9,10])
+    valor = 4
+    print(buscarvalor(vector,valor))
+    valor = 0
+    print(buscarvalor(vector,valor))
+       
      
           
 def main():
+    import numpy as np
     pedir_numeros()
     contador_aleatorio()
+    
+    vector = np.array([1,2,3,4,5,6,7,8,9,10])
+    valor = 4
+    print(buscarvalor(vector,valor))
+    valor = 0
+    print(buscarvalor(vector,valor))
+       
     
 if __name__ == '__main__':
     main()

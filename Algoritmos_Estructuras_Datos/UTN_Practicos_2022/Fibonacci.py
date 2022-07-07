@@ -99,6 +99,7 @@ def prettyPrintTree(node, prefix="", isLeft=True):
 def main():
     import sys
 
+
     def readlines():
         for line in sys.stdin:
             yield line.strip('\n')

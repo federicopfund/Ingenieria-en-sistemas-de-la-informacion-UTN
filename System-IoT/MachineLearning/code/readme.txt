@@ -1,8 +1,5 @@
 # Programming Machine Learning
 
-This is the source code for Paolo Perrotta's [Programming Machine Learning]
-(http://www.pragprog.com/titles/pplearn) book.
-
 To run this code, you need [Python 3](https://www.python.org/downloads/) (or
 greater) and a few libraries. You can install the libraries via Python's
 built-in package manager _pip_, or via the more sophisticated _Conda_ package
